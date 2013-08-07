@@ -19,7 +19,6 @@
     <platform name="ios">
 	<plugins-plist key="BarcodeScanner" string="CDVBarcodeScanner" />
 		
-        <!-- Cordova >= 2.3 -->
         <config-file target="config.xml" parent="/*">
             <feature name="BarcodeScanner">
                 <param name="ios-package" value="CDVBarcodeScanner"/>
@@ -48,11 +47,15 @@
         -->
 		
         <config-file target="res/xml/plugins.xml" parent="/plugins">
-            <plugin name="BarcodeScanner" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
+            <feature name="BarcodeScanner">
+                <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
+            </feature>
         </config-file>
 
         <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="BarcodeScanner" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
+            <feature name="BarcodeScanner">
+                <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
+            </feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
